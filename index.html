@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio | Keval Shah</title>
+        <link
+            rel="shortcut icon"
+            href="./src/img/logo.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./styles/colors.css" />
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/navbar.css" />
+        <link rel="stylesheet" href="./styles/terminal-window.css" />
+        <link rel="stylesheet" href="./styles/terminal.css" />
+        <link rel="stylesheet" href="./styles/typing.css" />
+        <link rel="stylesheet" href="./styles/responsive.css" />
+        <link rel="stylesheet" href="./styles/card-effect.css" />
+    </head>
+    <body>
+        <!-- navbar -->
+        <div class="navbar">
+            <img class="logo" src="./src/img/logo.png" alt="Logo" />
+            <div class="nav-menu">
+                <button
+                    onclick="auto('home', 1400)"
+                    class="Home btnTransparent"
+                >
+                    Home
+                </button>
+                <button
+                    onclick="auto('about', 1000)"
+                    class="About btnTransparent"
+                >
+                    About
+                </button>
+                <button onclick="auto('work', 2000)" class="btnTransparent">
+                    Work
+                </button>
+                <button onclick="auto('contact', 2000)" class="btnSolid">
+                    <div class="hover"><p>Contact</p></div>
+                    Contact
+                </button>
+            </div>
+            <button onclick="showSidebar()" class="btnTransparent menu-btn">
+                <img src="./src/img/menu.png" alt="" />
+            </button>
+        </div>
+        <!-- side navbar -->
+        <div class="sidebar">
+            <div class="nav-menu">
+                <button
+                    onclick="hideSidebar()"
+                    class="btnTransparent close-menu-btn"
+                >
+                    <img src="./src/img/close.png" alt="" />
+                </button>
+                <button
+                    onclick="auto('home', 1400)"
+                    class="Home btnTransparent"
+                >
+                    Home
+                </button>
+                <button
+                    onclick="auto('about', 1000)"
+                    class="About btnTransparent"
+                >
+                    About
+                </button>
+                <button onclick="auto('work', 2000)" class="btnTransparent">
+                    Work
+                </button>
+                <button onclick="auto('contact', 2000)" class="btnSolid">
+                    <div class="hover"><p>Contact</p></div>
+                    Contact
+                </button>
+            </div>
+        </div>
+        <!-- terminal window -->
+        <div class="container">
+            <div class="terminal-windows">
+                <!-- Titlebar -->
+                <div class="title">
+                    <div class="left">
+                        <img src="./src/img/terminal-icon.png" alt="" />
+                    </div>
+                    <p class="title-text">Terminal ~ keval@portfolio</p>
+                    <div class="right">
+                        <button onclick="error('Minimize Button is Disable!')">
+                            <img src="./src/img/hide.png" alt="" class="hide" />
+                        </button>
+                        <button onclick="maximize();">
+                            <img
+                                src="./src/img/maximize.png"
+                                alt=""
+                                class="max"
+                            />
+                        </button>
+                        <button
+                            class="close-btn"
+                            onclick="error('Close Button is Disable!')"
+                        >
+                            <img
+                                src="./src/img/close.png"
+                                alt=""
+                                class="close"
+                            />
+                        </button>
+                    </div>
+                </div>
+                <!-- Terminal -->
+                <div class="terminal" id="terminal" onclick="focusInput()">
+                    <!-- output -->
+                    <div class="output">
+                        <div class="help-log comment">
+                            Enter <b class="command">'help'</b> command to know
+                            the available commands.
+                        </div>
+                    </div>
+                    <!-- input -->
+                    <div class="input" id="input">
+                        <div class="prompt">
+                            <p class="user">keval@portfolio</p>
+                            [
+                            <p class="location" id="path">~/</p>
+                            ] ->
+                        </div>
+                        <input
+                            type="text"
+                            id="command"
+                            class="command"
+                            autofocus
+                            autocomplete="off"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Incapatible Display -->
+        <div class="incapatible">
+            <h1>Incapatible</h1>
+            <h2>This Mobile Display Resolution is not supported.</h2>
+            <p>
+                Please Try using a bigger display size like tablet, laptop or
+                PC.
+            </p>
+        </div>
+        <!-- error message -->
+        <div class="error-message" id="error">Error Message is here</div>
+
+        <!-- scripts -->
+        <script src="./scripts/script.js"></script>
+        <script src="./scripts/cd.js"></script>
+        <script src="./scripts/pwd.js"></script>
+        <script src="./scripts/ls.js"></script>
+        <script src="./scripts/cat.js"></script>
+        <script src="./scripts/output.js"></script>
+        <script src="./scripts/auto.js"></script>
+        <script src="./scripts/card-effect.js"></script>
+    </body>
+</html>

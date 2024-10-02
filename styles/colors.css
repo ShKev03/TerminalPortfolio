@@ -1,0 +1,13 @@
+:root {
+    --main: yellowgreen;
+    --title: #343a38;
+    --terminal: #1b1e1c;
+    --user: yellowgreen;
+    --location: #00c8ff;
+    --comment: #acacac;
+    --command: #ae5eff;
+    --link: #5d80ff;
+    --folder: #ff5e86;
+    --highlight: rgb(205, 50, 86);
+    --highlight-secondary: rgb(0, 255, 157);
+}

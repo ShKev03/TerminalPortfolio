@@ -1,0 +1,118 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: inherit;
+}
+
+.navbar .logo {
+    height: 70px;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar {
+    display: none;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    position: absolute;
+    z-index: 999;
+    width: 300px;
+    height: calc(100vh - 40px);
+    padding: 20px;
+    background-color: #343b37;
+    transition: 1s ease;
+}
+
+button img {
+    width: 20px;
+}
+
+.sidebar .nav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.2s;
+    font-family: monospace;
+}
+
+.btnTransparent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    color: white;
+    background-color: inherit;
+}
+
+.btnTransparent:hover {
+    color: var(--main);
+    background-color: #9d9d9d0a;
+    box-shadow: #00000016 0px 0px 10px;
+}
+
+.btnSolid {
+    overflow: hidden;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    position: relative;
+}
+
+.btnSolid:hover {
+    color: inherit;
+    background: #e2e2e20c;
+    box-shadow: #00000016 0px 0px 10px;
+}
+
+.btnSolid .hover {
+    display: flex;
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    transition: 0.7s;
+    justify-content: center;
+    background-color: var(--main);
+}
+
+.btnSolid .hover p {
+    font-family: monospace;
+    text-align: center;
+}
+
+.btnSolid:hover .hover {
+    width: 100%;
+    z-index: 1;
+}
+
+.close-menu-btn,
+.menu-btn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu-btn {
+    display: none;
+}
