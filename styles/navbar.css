@@ -1,11 +1,11 @@
 .navbar {
-    position: sticky;
+    position: relative;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: inherit;
+    z-index: 10;
 }
 
 .navbar .logo {

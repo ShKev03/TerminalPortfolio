@@ -111,3 +111,7 @@
     text-decoration: underline;
     color: var(--command);
 }
+
+.scrollTo {
+    height: 20px;
+}

@@ -6,6 +6,7 @@
     height: fit-content;
     background: var(--terminal);
     z-index: 99;
+    border: 2px solid var(--title);
 }
 
 .terminal-windows .title {
@@ -18,7 +19,7 @@
     overflow: hidden;
     cursor: default;
     border-radius: 5px;
-    margin: 2px;
+    margin: 3px;
 }
 
 .terminal-windows .title .left {
@@ -97,7 +98,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: 99;
 }
 
 .maximized .terminal-windows {
@@ -105,5 +106,5 @@
 }
 
 .maximized .terminal {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 67px);
 }

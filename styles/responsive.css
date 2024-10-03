@@ -58,9 +58,16 @@
     .terminal-windows {
         display: none;
     }
-
+    .navbar {
+        z-index: 11;
+    }
     .incapatible {
         display: flex;
         flex-direction: column;
+        z-index: 10;
+        background: black;
+    }
+    .matrixCanvas {
+        display: none;
     }
 }

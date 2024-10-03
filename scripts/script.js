@@ -16,6 +16,8 @@ let current_path = document.querySelector("#path");
 
 let output = document.querySelector(".output");
 
+let scrollbtm = document.querySelector(".scrollTo");
+
 commandInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         const command = commandInput.value.toLowerCase();
@@ -41,7 +43,7 @@ commandInput.addEventListener("keydown", (event) => {
         } else if (words[0] === "cat") {
             catCommand(words[1]);
         } else if (command === "") {
-            console.log("blank");
+            console.log("blank cmd");
         } else if (command === "email") {
             processor("opening default mail client ...");
             window
@@ -71,6 +73,7 @@ commandInput.addEventListener("keydown", (event) => {
             );
             console.log("Unknown command:", words[0]);
         }
+        scrollbtm.scrollIntoView();
     } else if (event.ctrlKey && event.key === "l") {
         event.preventDefault();
         output.innerHTML = "";

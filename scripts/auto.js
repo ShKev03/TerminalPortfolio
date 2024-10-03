@@ -2,6 +2,11 @@
 
 const input = document.getElementById("input");
 
+let stopHome = false;
+let stopWork = true;
+let stopAbout = true;
+let stopContact = true;
+
 const auto = (cmd, timeout) => {
     input.style.display = "none";
     changePath("~/");
@@ -16,42 +21,78 @@ const auto = (cmd, timeout) => {
         processor(
             `<div class="prompt"><p class="user">keval@portfolio</p>[<p class="location" id="path">~/</p>] -> <div id="typing" class="typing cmd">cat banner.txt</div></div>`
         );
+        stopHome = false;
+        stopWork = true;
+        stopAbout = true;
+        stopContact = true;
     } else if (cmd === "about") {
         processor(
             `<div class="prompt"><p class="user">keval@portfolio</p>[<p class="location" id="path">~/</p>] -> <div id="typing" class="typing cmd">whoami</div></div>`
         );
+        stopHome = true;
+        stopWork = true;
+        stopAbout = false;
+        stopContact = true;
     } else if (cmd === "work") {
         processor(
             `<div class="prompt"><p class="user">keval@portfolio</p>[<p class="location" id="path">~/</p>] -> <div id="typing" class="typing cmd">ls ./projects</div></div>`
         );
+        stopHome = true;
+        stopWork = false;
+        stopAbout = true;
+        stopContact = true;
     } else if (cmd === "contact") {
         processor(
             `<div class="prompt"><p class="user">keval@portfolio</p>[<p class="location" id="path">~/</p>] -> <div id="typing" class="typing cmd">pingme</div></div>`
         );
+        stopHome = true;
+        stopWork = true;
+        stopAbout = true;
+        stopContact = false;
     }
+
     setTimeout(() => {
         const typing = document.getElementById("typing");
         typing.classList.remove("typing");
         if (cmd === "home") {
-            processor(banner);
+            if (stopHome === true) {
+                return;
+            } else {
+                processor(banner);
+            }
         } else if (cmd === "about") {
-            processor(introduction);
+            if (stopAbout === true) {
+                return;
+            } else {
+                processor(introduction);
+            }
         } else if (cmd === "work") {
-            processor(lsProjects);
+            if (stopWork === true) {
+                return;
+            } else {
+                processor(lsProjects);
+            }
         } else if (cmd === "contact") {
-            processor("Opening Gmail on web browser ...");
-            setTimeout(
-                () =>
-                    window
-                        .open(
-                            "https://mail.google.com/mail/?view=cm&fs=1&to=keval.jignesh.shah@gmail.com",
-                            "_blank"
-                        )
-                        .focus(),
-                500
-            );
+            if (stopContact === true) {
+                return;
+            } else {
+                processor("Opening Gmail on web browser ...");
+                setTimeout(
+                    () =>
+                        window
+                            .open(
+                                "https://mail.google.com/mail/?view=cm&fs=1&to=keval.jignesh.shah@gmail.com",
+                                "_blank"
+                            )
+                            .focus(),
+                    500
+                );
+            }
         }
-        setTimeout(() => (input.style.display = "flex"), 400);
+        setTimeout(() => {
+            input.style.display = "flex";
+            console.log("auto command completed");
+            focusInput();
+        }, 400);
     }, 2100);
-    focusInput();
 };
