@@ -1,13 +1,13 @@
 :root {
     --main: yellowgreen;
-    --title: #36443b;
-    --terminal: #171c19;
+    --title: #272b28;
+    --terminal: #161917;
     --user: yellowgreen;
     --location: #00c8ff;
     --comment: #acacac;
-    --command: #ae5eff;
-    --link: #5d80ff;
-    --folder: #ff5e86;
+    --command: #fd3c3f;
+    --link: #ffff5d;
+    --folder: #5eacff;
     --highlight: rgb(205, 50, 86);
     --highlight-secondary: rgb(0, 255, 157);
 }

@@ -7,6 +7,7 @@
     background: var(--terminal);
     z-index: 99;
     border: 2px solid var(--title);
+    box-shadow: 2px 3px 15px #0000003c;
 }
 
 .terminal-windows .title {

@@ -63,7 +63,7 @@ button {
 
 .btnTransparent:hover {
     color: var(--main);
-    background-color: #9d9d9d0a;
+    background-color: #9d9d9d09;
     box-shadow: #00000016 0px 0px 10px;
 }
 
