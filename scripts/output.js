@@ -4,7 +4,8 @@ const lsHome = [
             <p class="comment">
             # list of files and directories in the current directory
             </p>
-            <a class="folder"> projects/ </a>
+            <a class="folder" onclick="changePathButton('~/projects')"> projects/ </a>
+            <a class="folder" onclick="changePathButton('~/skills')"> skills/ </a>
             <a class="file"> about.me </a>
             <a class="file"> banner.txt </a>
 
@@ -18,11 +19,41 @@ const lsProjects = [
             <p class="comment">
             # list of files and directories in the current directory
             </p>
-            <a href="https://amazon-gray.vercel.app/" target="_blank" class="folder"> amazon-clone/ </a>
-            <a href="https://github.com/shkev03/zoom" target="_blank" class="folder"> zoom-clone/ </a>
-            <a href="https://github.com/shkev03/whatschat" target="_blank" class="folder"> whatsapp-clone/ </a>
-            <a href="https://github.com/shkev03/instagram" target="_blank" class="folder"> instagram-clone/ </a>
-            <a href="https://github.com/shkev03/facebook" target="_blank" class="folder"> facebook-clone/ </a>
+            <a href="https://amazon-gray.vercel.app/" target="_blank" class="folder">
+                amazon-clone/
+                <div class="tech">
+                    <p class="comment">-> NextJS</p>
+                    <p class="comment">-> Tailwind</p>
+                </div>
+            </a>
+            <a href="https://github.com/shkev03/zoom" target="_blank" class="folder">
+                zoom-clone/
+                <div class="tech">
+                    <p class="comment">-> Node</p>
+                    <p class="comment">-> Socket</p>
+                </div>
+             </a>
+            <a href="https://github.com/shkev03/whatschat" target="_blank" class="folder">
+                whatsapp-clone/
+                <div class="tech">
+                    <p class="comment">-> React</p>
+                    <p class="comment">-> Firebase</p>
+                </div>
+            </a>
+            <a href="https://github.com/shkev03/instagram" target="_blank" class="folder">
+                instagram-clone/
+                <div class="tech">
+                    <p class="comment">-> ReactNative</p>
+                    <p class="comment">-> Firebase</p>
+                </div>
+            </a>
+            <a href="https://github.com/shkev03/facebook" target="_blank" class="folder">
+                facebook-clone/
+                <div class="tech">
+                    <p class="comment">-> NextJS</p>
+                    <p class="comment">-> Firebase</p>
+                </div>
+            </a>
         </div>
     `,
 ];
@@ -47,6 +78,24 @@ const help = [
     `,
 ];
 
+const lsSkills = [
+    `   
+        <div class="comment"># Programming Languages</div>
+        <pre>JavaScript     Web applications</pre>
+        <pre>Batch          Scripting, Hacking</pre>
+        <pre>Python         Machine Learning, Scripting, Hacking</pre>
+        <pre class="hidden">_</pre>
+        <div class="comment"># Web Fameworks and Technologies</div>
+        <pre>NodeJS         Backend Framework</pre>
+        <pre>ReactJS        Frontend Framework</pre>
+        <pre>ReactNative    Cross-platform Framework</pre>
+        <pre>NextJS         Frontend Framework</pre>
+        <pre class="hidden">_</pre>
+        <pre>Firebase       PaaS</pre>
+        <pre>AWS            PaaS</pre>
+    `,
+];
+
 const contact = [
     `   
         <div class="comment"># Contact me </div>
@@ -67,25 +116,10 @@ const introduction = [
         </p>
         <div class="hidden">_</div>
         <p class="whoami">
-            Passionate about <b>Software development</b> and
-            <b>cybersecurity</b>, I am constantly driven to
-            expand my knowledge in creating innovative Apps
-            and understanding the intricasis of hacking.
-            With a Strong foundation in coding and keen eye
-            for detail, I thrive in environments that
-            challenge me to solve problems and enhance
-            security measures.
+            I specialize in <b>software development</b> and <b>cybersecurity</b>, aiming to create <b class="highlight-white">innovative apps</b> and understand the <b class= "highlight-white">complexities of hacking</b>. With a strong foundation in coding and a keen eye for <b class="highlight-white">detail</b>, I excel in <b class="highlight-white">problem-solving</b> and enhancing <b class="highlight-white"> security measures</b>.
         </p>
         <p class="whoami">
-            <b>My goal</b> is to contribute to projects that
-            push the boundries of technology while ensuring
-            robust and secure user experiences. I am always
-            eager to learn new technologies and
-            methodologies, and I enjoy collaborating with
-            others to bring creative solutions to my life.
-            My commitment to continuous improvement keeps me
-            motivated to stay at the forefront of the
-            industry advancement.
+            My <b>goal</b> is to contribute to projects that advance <b class= "highlight-white">technology</b> while ensuring <b class= "highlight-white">secure user experiences</b>. I enjoy learning new <b class= "highlight-white">technologies</b> and collaborating with others to develop effective <b class= "highlight-white">solutions</b>.
         </p>
         <div class="hidden">_</div>
     `,
@@ -95,6 +129,7 @@ const banner = [
     `
         <pre class="banner">
 
+        
 #   #  ##### #     #      ###    ##
 #   #  #     #     #     #   #   ##
 #   #  #     #     #     #   #   ##
@@ -102,6 +137,14 @@ const banner = [
 #   #  #     #     #     #   #   ##
 #   #  #     #     #     #   #
 #   #  ##### ##### #####  ###    ##
+___________________________________
+
+I am <strong>Keval Shah</strong>,
+16 years old.
+___________________________________
+
+based in <strong>Maharashtra, India</strong>
+
         </pre>
     `,
 ];

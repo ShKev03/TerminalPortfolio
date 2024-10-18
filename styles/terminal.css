@@ -98,18 +98,40 @@
     color: var(--highlight-secondary);
 }
 
+.whoami b.highlight-white {
+    color: var(--highlight-tritry);
+}
+
 .banner {
     font-family: monospace;
 }
 
 .folder {
     text-decoration: none;
-    width: fit-content;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.folder .comment {
+    color: rgb(234, 234, 234);
+    padding-left: 15px;
+}
+
+.folder .tech {
+    color: rgb(234, 234, 234);
+    padding-left: 15px;
+    display: flex;
+    width: 50%;
 }
 
 .folder:hover {
-    text-decoration: underline;
     color: var(--command);
+}
+
+.folder:hover .comment {
+    text-decoration: none !important;
+    color: rgb(255, 228, 228);
 }
 
 .scrollTo {

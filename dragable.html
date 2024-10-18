@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Draggable Block</title>
+        <style>
+            #movableBlock {
+                width: 200px;
+                height: 200px;
+                background-color: lightblue;
+                position: absolute;
+                cursor: move;
+                border: 1px solid #000;
+            }
+            #dragButton {
+                width: 100px;
+                height: 30px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="movableBlock">
+            <button id="dragButton">Drag Me</button>
+        </div>
+
+        <script>
+            const movableBlock = document.getElementById("movableBlock");
+            const dragButton = document.getElementById("dragButton");
+
+            let offsetX, offsetY;
+
+            dragButton.addEventListener("mousedown", (e) => {
+                offsetX = e.clientX - movableBlock.getBoundingClientRect().left;
+                offsetY = e.clientY - movableBlock.getBoundingClientRect().top;
+
+                document.addEventListener("mousemove", moveBlock);
+                document.addEventListener("mouseup", stopMoving);
+            });
+
+            function moveBlock(e) {
+                movableBlock.style.left = `${e.clientX - offsetX}px`;
+                movableBlock.style.top = `${e.clientY - offsetY}px`;
+            }
+
+            function stopMoving() {
+                document.removeEventListener("mousemove", moveBlock);
+                document.removeEventListener("mouseup", stopMoving);
+            }
+        </script>
+    </body>
+</html>

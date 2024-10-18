@@ -22,7 +22,7 @@
     margin-bottom: 100px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 890px) {
     .menu-btn {
         display: block;
     }
@@ -34,6 +34,9 @@
     }
     .maximized .terminal-windows {
         width: 100% !important;
+    }
+    .floating-socials {
+        display: none;
     }
 }
 
