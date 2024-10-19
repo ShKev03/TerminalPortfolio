@@ -45,6 +45,13 @@ body {
     z-index: 100;
 }
 
+.non-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 ::-webkit-scrollbar {
     width: 10px; /* Adjust the width as needed */
 }

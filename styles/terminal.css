@@ -107,10 +107,8 @@
 }
 
 .folder {
+    cursor: pointer;
     text-decoration: none;
-    display: flex;
-    align-items: space-between;
-    justify-content: space-between;
 }
 
 .folder .comment {
@@ -118,20 +116,13 @@
     padding-left: 15px;
 }
 
-.folder .tech {
-    color: rgb(234, 234, 234);
-    padding-left: 15px;
-    display: flex;
-    width: 50%;
-}
-
 .folder:hover {
     color: var(--command);
 }
 
-.folder:hover .comment {
-    text-decoration: none !important;
-    color: rgb(255, 228, 228);
+.files {
+    color: var(--files) !important;
+    text-decoration: none;
 }
 
 .scrollTo {

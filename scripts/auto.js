@@ -58,7 +58,7 @@ const auto = (cmd, timeout) => {
             if (stopHome === true) {
                 return;
             } else {
-                processor(banner);
+                processor(randomAscii(PenguinBanner));
             }
         } else if (cmd === "about") {
             if (stopAbout === true) {

@@ -36,12 +36,21 @@ commandInput.addEventListener("keydown", (event) => {
             PWD();
         } else if (words[0] === "ls") {
             lsCommand(words[1]);
+        } else if (words[0] === "sudo") {
+            processor(randomAscii(sudoer));
         } else if (words[0] === "help") {
             processor(help);
         } else if (command === "whoami") {
             processor(introduction);
         } else if (words[0] === "cat") {
             catCommand(words[1]);
+        } else if (words[0] === "gui") {
+            processor("GUI version of site is still in development ... ");
+            processor("Sorry for the inconvinience ... ");
+            // processor("Opening GUI portfolio");
+            // setTimeout(() => {
+            //     window.location.href = "/gui";
+            // }, 1000);
         } else if (command === "") {
             console.log("blank cmd");
         } else if (command === "email") {
@@ -119,4 +128,8 @@ const error = (msg) => {
     setTimeout(() => {
         errorMsg.style.display = "none";
     }, 2000);
+};
+
+const randomAscii = (asciiArtList) => {
+    return asciiArtList[Math.floor(Math.random() * asciiArtList.length)];
 };

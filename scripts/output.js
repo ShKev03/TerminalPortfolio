@@ -6,8 +6,8 @@ const lsHome = [
             </p>
             <a class="folder" onclick="changePathButton('~/projects')"> projects/ </a>
             <a class="folder" onclick="changePathButton('~/skills')"> skills/ </a>
-            <a class="file"> about.me </a>
-            <a class="file"> banner.txt </a>
+            <a class="files"> about.me </a>
+            <a class="files"> banner.txt </a>
 
         </div>
     `,
@@ -19,41 +19,11 @@ const lsProjects = [
             <p class="comment">
             # list of files and directories in the current directory
             </p>
-            <a href="https://amazon-gray.vercel.app/" target="_blank" class="folder">
-                amazon-clone/
-                <div class="tech">
-                    <p class="comment">-> NextJS</p>
-                    <p class="comment">-> Tailwind</p>
-                </div>
-            </a>
-            <a href="https://github.com/shkev03/zoom" target="_blank" class="folder">
-                zoom-clone/
-                <div class="tech">
-                    <p class="comment">-> Node</p>
-                    <p class="comment">-> Socket</p>
-                </div>
-             </a>
-            <a href="https://github.com/shkev03/whatschat" target="_blank" class="folder">
-                whatsapp-clone/
-                <div class="tech">
-                    <p class="comment">-> React</p>
-                    <p class="comment">-> Firebase</p>
-                </div>
-            </a>
-            <a href="https://github.com/shkev03/instagram" target="_blank" class="folder">
-                instagram-clone/
-                <div class="tech">
-                    <p class="comment">-> ReactNative</p>
-                    <p class="comment">-> Firebase</p>
-                </div>
-            </a>
-            <a href="https://github.com/shkev03/facebook" target="_blank" class="folder">
-                facebook-clone/
-                <div class="tech">
-                    <p class="comment">-> NextJS</p>
-                    <p class="comment">-> Firebase</p>
-                </div>
-            </a>
+            <pre><a class=folder target="_blank" href="https://amazon-gray.vercel.app/">amazon-clone/</a>     NextJS, Tailwind</pre>
+            <pre><a class=folder target="_blank" href="https://github.com/shkev03/zoom">zoom-clone/ </a>      NodeJS, Socket</pre>
+            <pre><a class=folder target="_blank" href="https://github.com/shkev03/whatschat">whatsapp-clone/</a>   ReactJS, Firebase</pre>
+            <pre><a class=folder target="_blank" href="https://github.com/shkev03/instagram">instagram-clone/</a>  ReactNative, Firebase</pre>
+            <pre><a class=folder target="_blank" href="https://github.com/shkev03/facebook">facebook-clone/</a>   NextJS, AWS amplify</pre>
         </div>
     `,
 ];
@@ -61,13 +31,15 @@ const lsProjects = [
 const help = [
     `   
         <div class="comment"># available commands (basic)</div>
+        <pre>help           prints all available commands </pre>
+        <pre>sudo           give u root privilages </pre>
+        <pre>whoami         prints more about me </pre>
         <pre>ls             lists all available files and directories</pre>
         <pre>cd             changes the current directory</pre>
         <pre>pwd            prints the current working directory</pre>
         <pre>clear          clears the terminal output</pre>
         <pre>cat            reads the files and prints them</pre>
-        <pre>whoami         prints more about me </pre>
-        <pre>help           prints all available commands </pre>
+        <pre>gui            opens a GUI portfolio site </pre>
         <pre class="hidden">_</pre>
         <div class="comment"># additional commands (to contact me)</div>
         <pre>pingme         opens gmail in new tab</pre>
@@ -81,18 +53,18 @@ const help = [
 const lsSkills = [
     `   
         <div class="comment"># Programming Languages</div>
-        <pre>JavaScript     Web applications</pre>
-        <pre>Batch          Scripting, Hacking</pre>
-        <pre>Python         Machine Learning, Scripting, Hacking</pre>
+        <pre><a class="files" href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>     Web applications</pre>
+        <pre><a class="files" href="https://en.wikipedia.org/wiki/Batch_file">Batch</a>          Scripting, Hacking</pre>
+        <pre><a class="files" href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>         Machine Learning, Scripting, Hacking</pre>
         <pre class="hidden">_</pre>
         <div class="comment"># Web Fameworks and Technologies</div>
-        <pre>NodeJS         Backend Framework</pre>
-        <pre>ReactJS        Frontend Framework</pre>
-        <pre>ReactNative    Cross-platform Framework</pre>
-        <pre>NextJS         Frontend Framework</pre>
+        <pre><a class="files" href="https://en.wikipedia.org/wiki/Node.js">NodeJS</a>         Backend Framework</pre>
+        <pre><a class="files" href="https://en.wikipedia.org/wiki/React_(JavaScript_library)">ReactJS</a>        Frontend Framework</pre>
+        <pre><a class="files" href="https://en.wikipedia.org/wiki/React_Native">ReactNative</a>    Cross-platform Framework</pre>
+        <pre><a class="files" href="https://en.wikipedia.org/wiki/Next.js">NextJS</a>         Frontend Framework</pre>
         <pre class="hidden">_</pre>
-        <pre>Firebase       PaaS</pre>
-        <pre>AWS            PaaS</pre>
+        <pre><a class="files" href="https://en.wikipedia.org/wiki/Firebase">Firebase</a>       PaaS</pre>
+        <pre><a class="files" href="https://en.wikipedia.org/wiki/Amazon_Web_Services">AWS</a>            PaaS</pre>
     `,
 ];
 
@@ -147,4 +119,84 @@ based in <strong>Maharashtra, India</strong>
 
         </pre>
     `,
+];
+
+PenguinBanner = [
+    `
+    <pre>
+
+ _____________________________________
+|      I am <strong>Keval Shah</strong>. i am 17,      |
+|     based in Maharashtra, India.    |
+ -------------------------------------
+         o  
+            o    .--.
+                |o_o | 
+                |:_/ |
+               //   \\ \\
+              (|     | )
+             /'\\_   _/ \\
+             \\___)=(___/
+
+    </pre>
+`,
+    `
+    <pre>
+ _____________________________________
+|      I am <strong>Keval Shah</strong>. i am 17,      |
+|     based in Maharashtra, India.    |
+ -------------------------------------
+          o
+            o  _____
+              / ()  \\         
+             _|_____|_       
+            | | === | |      
+            |_|  O  |_|      
+             ||  O  ||          
+             ||__*__||          
+            |~ \\___/ ~|         
+            /=\\ /=\\ /=\\         
+   _________[_]_[_]_[_]________
+    </pre>
+`,
+];
+
+sudoer = [
+    `
+    <pre>
+
+ ______________________________________
+|   Nice try, but you're still just    |
+|              a muggle.               |
+ --------------------------------------
+          o  
+            o    .--.
+                |o_o |
+                |:_/ |
+               //   \\ \\
+              (|     | )
+             /'\\_   _/ \\
+             \\___)=(___/
+
+    </pre>
+`,
+    `
+    <pre>
+ ______________________________________
+|       Access Denied! Sorry, but      |
+|   the Force is not strong with you   |
+ --------------------------------------
+          o
+            o  _____
+              / ()  \\         
+             _|_____|_       
+            | | === | |      
+            |_|  O  |_|      
+             ||  O  ||          
+             ||__*__||          
+            |~ \\___/ ~|         
+            /=\\ /=\\ /=\\         
+   _________[_]_[_]_[_]________
+    </pre>
+`,
 ];
